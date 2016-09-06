@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>邓长生的博客</title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-combined.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../js/jquery.1.9.1.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row-fluid" id = "head">
+        <div class="span12" >
+            <br>
+            <h1>
+                &nbsp;&nbsp;just to do
+            </h1>
+            <br>
+            <p>
+                <h2><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lexiaoyaoge</em>&nbsp;<span>只为在装逼的道路上，越走越远！</span></h2>
+            </p>
+            <div id = 'head-label'>
+                <div class="label">福建10大杰出青年</div>
+                <div class="label">装逼青年</div>
+                <div class="label">屌丝当道</div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <div id = "person">个人资料</div>
+            <img  src ="../images/cap.jpg" />
+            <br>
+            <br>
+            <ul class="nav nav-list well">
+                <li class="nav-header">
+                    文章分类
+                </li>
+                <li>
+                    <a href="#"> html+css</a>
+                </li>
+                <li>
+                    <a href="#">git</a>
+                </li>
+                <li>
+                    <a href="#">linux</a>
+                </li>
+                <li>
+                    <a href="#">javascript</a>
+                </li>
+                <li>
+                    <a href="#">jquery</a>
+                </li>
+                <li>
+                    <a href="#">网站优化</a>
+                </li>
+                <li>
+                    <a href="#">微信开放</a>
+                </li>
+                <li>
+                    <a href="#">网站优化</a>
+                </li>
+                <li>
+                    <a href="#">杂谈</a>
+                </li>
+            </ul>
+            <ul class="nav nav-list well">
+                <li class="nav-header" >
+                    月光宝盒
+                </li>
+                <li>
+                    <a href="#">最近一周</a>
+                </li>
+                <li>
+                    <a href="#">最近一月</a>
+                </li>
+                <li>
+                    <a href="#">最近三月</a>
+                </li>
+                <li>
+                    <a href="#">更久</a>
+                </li>
+            </ul>
+        </div>
+        <div class="span10">
+                    <center><h1>数据库性能优化</h1></center>
+                    <p>--来自兄弟连梁芝分享2016-09-06</p>
+                <p>数据库调优，就好比盖楼打地基，地基打得不稳，楼层一高，就会塌方。数据库也是如此，数据少，并发小，隐藏的问题是发现不了的，只要达到一定规模后，所有的问题就会全部曝露出来了，所以前期的设计阶段尤为重要。</p>
+                <h2>数据库优化分类</h2>
+                <ul>
+                <li>硬件</li>
+                <li>网络</li>
+                <li>软件</li>
+                </ul>
+                <blockquote>
+                <p>硬件、网络取决于公司的经济实力。</p>
+                <p>软件再分为表设计(字段类型、存储引擎)、SQl语句与索引、配置文件参数、体系架构等方面的优化。</p>
+                </blockquote>
+                <h3>表设计优化</h3>
+                <blockquote>
+                <p>一个好的数据库设计对于数据库的性能优化常常会起到事半功倍的效果。合理的数据库结构不仅可以使数据库占用更小的磁盘空间，而且能够使查询速度更快。</p>
+                </blockquote>
+                <h4>表优化的常用方法</h4>
+                <ul>
+                <li>将字段很多的表分解成多个表</li>
+                </ul>
+                <blockquote>
+                <p>对于字段较多的表，如果有些字段的使用频率很低，可以将这些字段分离出来形成新表。因为当一个表的数据量很大的时候，会由于使用频率低的字段的存在而变慢。</p>
+                </blockquote>
+                <ul>
+                <li>增加冗余字段</li>
+                </ul>
+                <blockquote>
+                <p>设计数据库表时应尽量遵守范式理论的约定，尽可能减少冗余字段。但是合理地加入冗余字段也可以提高查询速度。这就是以空间换时间。</p>
+                </blockquote>
+                <p>总结：在开发应用程序时，设计的数据库要最大程度地遵守三范式。但是，三范式最大的问题在于通常需要join很多表，而这个会导致查询效率很低。<span style="color:red">所以有时候基于性能考虑，</span>我们需要有意违反三范式，适度的冗余，以达到提高查询效率的目的。</p>
+                <h3>字段类型的选取</h3>
+                <blockquote>
+                <p>原则：选择字段的一般原则是保小不保大，能用占用字节少的字段就不用大字段。</p>
+                </blockquote>
+                <ul>
+                <li>数字类型</li>
+                </ul>
+                <p><img src="./img/2016-08-05_201403.png" /></p>
+                <p>tinyint类型最大存储是255。</p>
+                <pre><code>create table tmp(id tinyint);
+
+                insert into tmp(id) values(256);//溢出
+                </code></pre>
+
+                <ul>
+                <li>
+                int(11) vs int(21)
+                存储空间还是存储范围有区别？
+                int(11)与int(21)的存储空间与存储范围是一样的。
+                </li>
+                </ul>
+                <p>区别是：如果你选择是int(11)，那么你存放了一个1，那么结果是1前面有10个0，int(21)前面有20个零</p>
+                <pre><code>实验：
+                    create table t(a int(11) zerofill,b int(21) zerofill);//zerofill 是补全零的
+
+                    insert into t values(1,1);
+
+                    select * from t;
+
+                    +-------------+-----------------------+
+                    | a           | b                     |
+                    +-------------+-----------------------+
+                    | 00000000001 | 000000000000000000001 |
+                    +-------------+-----------------------+
+                    1 row in set (0.00 sec)
+                </code></pre>
+
+                <p>字符串类型
+                * char</p>
+                <pre><code>char存储定长，容易造成空间的浪费。char数据类型存储大小最大为255字符。
+
+                最大255个字符的意思是最大只能存放255个字母或者255个汉子
+                </code></pre>
+
+                <ul>
+                <li>
+                <p>varchar</p>
+                <p>varchar存储变长，节省存储空间,varchar需要一位来存储长度。varchar是使用多少，就使用多少空间。所以通常都是选择varchar。</p>
+                <p>varchar数据类型可以存储超过255个字符</p>
+                <p>注意：char和varchar存储单位为字符。字符与字节需要换算。</p>
+                <p>实验：
+                        //char最大长度255字符，所以报错
+                        mysql&gt; create table c(a char(256));</p>
+                <pre><code>ERROR 1074 (42000): Column length too big for column 'a' (max = 255);
+                use BLOB or TEXT instead
+
+                //varchar存储长度可以超过255
+                create table c(a varchar(256));
+                Query OK, 0 rows affected (0.16 sec)
+                </code></pre>
+
+                </li>
+                <li>
+                <p>字符与字节的关系</p>
+                <p>如果是utf8字符集，因为utf8存放中文占用三个字节大小，所以存放两个中文需要6个字节大小。</p>
+                <p>一个英语字母无论什么情况下都是占用一个字节的，所以varchar(6)就可以存放github这个英语单词了</p>
+                </li>
+                <li>
+                <p>date</p>
+                <p>date三个字节，如2015-05-01只能存储到天数。date精确到年月日</p>
+                </li>
+                <li>
+                <p>time</p>
+                <p>time三个字节,只能存小时分钟，time精确到小时分钟秒</p>
+                </li>
+                <li>
+                <p>datetime</p>
+                <p>datetime八字节，可以存储年月日时分秒</p>
+                </li>
+                <li>
+                <p>timestamp</p>
+                <p>timestamp四字节，可以存储年月日时分秒。</p>
+                </li>
+                </ul>
+                <h4>字符串类型总结</h4>
+                <ul>
+                <li>char与varchar定义的长度是字符长度不是字节长度</li>
+                <li>存储字符串推荐选择使用varchar(n),n尽量小</li>
+                </ul>
+                <h3>采用合适的锁机制</h3>
+                <ul>
+                <li>
+                MySQL的锁有以下几种形式：
+                <ul>
+                <li>表级锁：开销小，加锁快；不会出现死锁；锁定粒度大，发生锁冲突的概率高，并发度最低。MyISAM属于这种类型。</li>
+                <li>行级锁：开销大，加锁慢；会出现死锁；锁定粒度小，发生锁冲突的概率小，并发度最高。InnoDB就是行锁。</li>
+                </ul>
+                </li>
+                </ul>
+                <h3>表锁特点</h3>
+                <blockquote>
+                <p>MyISAM存储引擎只支持表锁，所以对MyISAM表进行操作，会存在以下情况：</p>
+                </blockquote>
+                <ul>
+                <li>对MyISAM表的读操作，不会阻塞其他进程对同一个表的读请求，但会阻塞对同一个表写请求。只有当读锁释放后，才会执行其他进程的写操作。</li>
+                <li>对MyISAM表的写操作，会阻塞其他进程对同一个表的读和写操作，只有当写锁释放后，才会执行其他进程的读写操作。</li>
+                </ul>
+                <h5>表锁特点实验</h5>
+                <h6>读锁阻塞写锁</h6>
+                <ul>
+                <li>
+                <p>准备一个千万级的数据表  </p>
+                <pre><code>create table t2(id int primary key auto_increment,
+                name varchar(20))engine=myisam;
+
+                insert into t2(name) values('a'),('b'),('c');
+
+                insert into t2(name) select name from t2;//这条语句重复n次后就有很多数据
+                </code></pre>
+
+                </li>
+                <li>
+                <p>当正在读myisam，同时不能写</p>
+                </li>
+                </ul>
+                <blockquote>
+                <p>select * from t2;</p>
+                <p>update t2 set name= 'liangzhi' where id = 1;</p>
+                </blockquote>
+                <p><span style="color:red">更新语句，只有等查询语句执行结束后才可以执行，也就是说读锁释放后，才能进行写操作。否则一直在等待状态。</span></p>
+                <h5>写锁阻塞读/写锁</h5>
+                <blockquote>
+                <p>update t2 set name='gz' where id &gt; 1000;</p>
+                </blockquote>
+                <p>这个时候，t2已经加了写锁，这个时候，去执行查询。也是只能等待写锁释放。</p>
+                <blockquote>
+                <p>select * from t2 limit 1;</p>
+                </blockquote>
+                <h3>行锁的特点</h3>
+                <blockquote>
+                <p>InnoDB存储引擎是通过索引上的索引项加锁来实现的，这就意味着：只有通过索引条件检索数据，InnoDB才会使用行级锁。否则，InnoDB将使用表锁。</p>
+                </blockquote>
+                <h4>行锁使用情况</h4>
+                <h5>实验(验证行锁只会影响到对应行，而不是整个表)</h5>
+                <pre><code>    create table t3(id int primary key auto_increment,name varchar(20))engine=innodb;
+
+                    insert into t3(name) values('a'),('b'),('c');
+
+                    insert into t3(name) select name from t2;//这条语句重复n次后就有很多数据
+
+                    update t3 set name='gz' where id &gt; 1000;//影响的是id&gt;1000的行
+
+                    select * from t3 limit 1;
+                </code></pre>
+
+                <h2>InnoDB引擎与MyISAM引擎对比</h2>
+                <ul>
+                <li>
+                <p>事务支持</p>
+                <p>MyISAM是非事务安全型的，而InnoDB是事务安全型的，也就是支持事务</p>
+                </li>
+                <li>
+                <p>锁机制</p>
+                <p>MyISAM锁是表锁，锁开销最小，而InnoDB支持行锁，锁管理开销大，支持更好的并发写操作。</p>
+                </li>
+                <li>
+                <p>文件保存形式</p>
+                <p>每张MyISAM表存放在3个文件中：frm文件存放表格存放，数据文件是MYD，索引文件是MYI</p>
+                </li>
+                <li>
+                <p>数据安全性
+                InnoDB表比MyISAM表更安全，因为InnoDB具有崩溃恢复能力。</p>
+                </li>
+                </ul>
+                <h2>如何选择表引擎</h2>
+                <blockquote>
+                <p>InnoDB支持行锁、事务。如果应用中需要执行大量的读写操作，应该选择InnoDB，这样可以提高多用户并发操作的性能。在MySQL5.5之后版本，Oracle已经很少支持MyISAM了，所以建议优先选择InnoDB引擎。</p>
+                </blockquote>
+                <h2>SQL优化与合理利用索引</h2>
+                <p>系统优化中一个很重要的方面就是SQL语句的优化。对于海量数据，劣质SQL语句和高效SQL语句之间的速度差别可以达到上百倍。</p>
+                <h3>如何定位执行很慢的SQL语句</h3>
+                <p><span style="color:red">开启慢查询日志的好处是可以通过记录、分析慢SQL语句来优化SQL语句</span></p>
+                <p>开启慢查询日志，在my.cnf配置文件中，加入以下参数：</p>
+                <pre><code>slow_query_log = 1
+                slow_query_log_file = mysql.slow
+                long_query_time = 1      # 超过2秒的SQL会记录下来
+                </code></pre>
+
+                <h3>SQL语句优化建议</h3>
+                <ul>
+                <li>避免使用子查询，可以用left join表连接替换</li>
+                <li>
+                <p>limit分页优化</p>
+                <p>传统的分页：select SQL_NO_CACHE * from t2 order by id limit 99999,10;</p>
+                <p>传统的的分页，虽然用上了id索引，但要从第一行开始起定位到99999行，然后再扫描出后10行，相当于进行一个全表扫描，显然效率不高。</p>
+                <p>优化方法：</p>
+                <p>select SQL_NO_CACHE * from t2 where id &gt;= 100000 order by id limit 10;</p>
+                <p>优化方法利用id索引直接定位100000行，然后再扫描出后10行。速度相当快。</p>
+                </li>
+                <li>
+                <p>避免使用*号，只查需要的字段</p>
+                </li>
+                <li>多使用limit，减少数据传输</li>
+                <li>可以使用冗余来减少关联表查询</li>
+                <li>给常在where条件后的字段添加索引，并且合理使用索引</li>
+                </ul>
+                <h3>合理使用索引</h3>
+                <p>适当的索引对应用的性能来说相当重要，而且也建议在MySQL中使用索引，它的速度是很快的。</p>
+                <p>但是索引也是有成本的。<span style="color:red">每次向表中写入时，如果带有一个或多个索引，那么MySQL也要更新各个索引。索引还增加了数据库的规模，也就是说索引也是占据空间的。</span></p>
+                <p>只有当某列被用于where子句时，才能享受索引性能提升的好处。如果不使用索引，它就没有价值，而且会带来维护上的开销。</p>
+                <h3>索引常见用法</h3>
+                <ul>
+                <li>
+                <p>依据where查询条件建立索引</p>
+                <pre><code>select a,b from tab a where c = ? //应该给c建立索引
+                </code></pre>
+
+                </li>
+                <li>
+                <p>使用联合索引，而不是多个单列索引</p>
+                <pre><code>select * from tab where a = ? and b =?
+                //给(a,b)建立联合索引，而不是分别给a,b建立索引
+                </code></pre>
+
+                </li>
+                <li>
+                <p>联合索引中索引字段的顺序根据区分度排，区分度大的放在前面</p>
+                <pre><code>//(name,sex);//将name放前面，因为name的区分度更大。因为sex只有0 1 2 这个三个值。
+                </code></pre>
+
+                </li>
+                <li>
+                <p>合理创建联合索引，避免冗余</p>
+                <pre><code>//(a),(a,b),(a,b,c)只要给(a,b,c)建立索引就行
+                </code></pre>
+
+                </li>
+                <li>order by 、group by 、 distrinct字段添加索引</li>
+                </ul>
+                <h4>用不到索引的情况</h4>
+                <ul>
+                <li>
+                <p>字段使用函数，将不能用到索引</p>
+                <pre><code>select createtime from aa where date(createtime) = curdate();
+
+                //where后面的字段(createtime)使用函数,将不会使用到索引。
+                </code></pre>
+
+                </li>
+                <li>
+                <p>用数字当字符类型，数字一定要加引号</p>
+                <pre><code>select * from user where name = 123 //这SQL语句用不到name索引
+
+                select * from user where name = '123' //这样写才会用到name字段上的索引
+                </code></pre>
+
+                </li>
+                <li>
+                <p>在使用like关键字进行查询的语句中，如果匹配字符串的第一个字符为&quot;%&quot;，索引不会起作用。</p>
+                </li>
+                <li>
+                <p>联合索引，只有查询条件中使用了这些字段中第一个字段时，索引才会被使用</p>
+                <pre><code>create index in_name on user(name,email)
+                explain select * from user where name = 'jack'; //用到索引
+                explain select * from user where email = 'jack@qq.com'; //用不到索引
+                </code></pre>
+
+                </li>
+                <li>
+                <p>使用OR关键字的查询语句</p>
+                <ul>
+                <li>查询语句的查询条件中只有OR关键字，且OR前后的两个条件中的列都是索引时，查询中才使用索引。否则查询将不使用索引。</li>
+                </ul>
+                </li>
+                <li>
+                <p>order by 的字段混合使用asc和desc用不到索引</p>
+                <pre><code>select * from user order by id desc,name asc;
+                </code></pre>
+
+                </li>
+                <li>
+                <p>where 子句使用的字段和order by 的字段不一致</p>
+                <pre><code>select * from user where name = 'jack' order by id;
+                </code></pre>
+
+                </li>
+                <li>
+                <p>对不同关键字使用order by 排序</p>
+                <pre><code>select * from user order by name,id;
+                </code></pre>
+
+            <p>---来自 51cto雲霏霏 雲霏霏的博客</p>
+            网上关于SQL优化的教程很多，但是比较杂乱。近日有空整理了一下，写出来跟大家分享一下，其中有错误和不足的地方，还请大家纠正补充。<br />
+            <br />
+            这篇文章我花费了大量的时间查找资料、修改、排版，希望大家阅读之后，感觉好的话推荐给更多的人，让更多的人看到、纠正以及补充。<br />
+            <br />
+            1.对查询进行优化，要尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。<br />
+            <br />
+            2.应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如：<br />
+            <br />
+            select id from t where num is null<br />
+            <br />
+            最好不要给数据库留NULL，尽可能的使用 NOT NULL填充数据库.<br />
+            <br />
+            备注、描述、评论之类的可以设置为 NULL，其他的，最好不要使用NULL。<br />
+            <br />
+            不要以为 NULL 不需要空间，比如：char(100) 型，在字段建立时，空间就固定了， 不管是否插入值（NULL也包含在内），都是占用 100个字符的空间的，如果是varchar这样的变长字段， null 不占用空间。<br />
+            <br />
+            可以在num上设置默认值0，确保表中num列没有null值，然后这样查询：<br />
+            <br />
+            select id from t where num = 0<br />
+            <br />
+            3.应尽量避免在 where 子句中使用 != 或 &lt;&gt; 操作符，否则将引擎放弃使用索引而进行全表扫描。<br />
+            <br />
+            4.应尽量避免在 where 子句中使用 or 来连接条件，如果一个字段有索引，一个字段没有索引，将导致引擎放弃使用索引而进行全表扫描，如：<br />
+            <br />
+            select id from t where num=10 or Name = 'admin'<br />
+            <br />
+            可以这样查询：<br />
+            <br />
+            select id from t where num = 10<br />
+            union all<br />
+            select id from t where Name = 'admin'<br />
+            <br />
+            5.in 和 not in 也要慎用，否则会导致全表扫描，如：<br />
+            <br />
+            select id from t where num in(1,2,3)<br />
+            <br />
+            对于连续的数值，能用 between 就不要用 in 了：<br />
+            <br />
+            select id from t where num between 1 and 3<br />
+            <br />
+            很多时候用 exists 代替 in 是一个好的选择：<br />
+            <br />
+            select num from a where num in(select num from b)<br />
+            <br />
+            用下面的语句替换：<br />
+            <br />
+            select num from a where exists(select 1 from b where num=a.num)<br />
+            <br />
+            6.下面的查询也将导致全表扫描：<br />
+            <br />
+            select id from t where name like ‘%abc%’<br />
+            <br />
+            若要提高效率，可以考虑全文检索。<br />
+            <br />
+            7.如果在 where 子句中使用参数，也会导致全表扫描。因为SQL只有在运行时才会解析局部变量，但优化程序不能将访问计划的选择推迟到运行时；它必须在编译时进行选择。然 而，如果在编译时建立访问计划，变量的值还是未知的，因而无法作为索引选择的输入项。如下面语句将进行全表扫描：<br />
+            <br />
+            select id from t where num = @num<br />
+            <br />
+            可以改为强制查询使用索引：<br />
+            <br />
+            select id from t with(index(索引名)) where num = @num<br />
+            <br />
+            应尽量避免在 where 子句中对字段进行表达式操作，这将导致引擎放弃使用索引而进行全表扫描。如：<br />
+            <br />
+            select id from t where num/2 = 100<br />
+            <br />
+            应改为:<br />
+            <br />
+            select id from t where num = 100*2<br />
+            <br />
+            9.应尽量避免在where子句中对字段进行函数操作，这将导致引擎放弃使用索引而进行全表扫描。如：<br />
+            <br />
+            select id from t where substring(name,1,3) = ’abc’&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-–name以abc开头的id<br />
+            select id from t where datediff(day,createdate,’2005-11-30′) = 0&nbsp;&nbsp;&nbsp;&nbsp;-–‘2005-11-30’&nbsp;&nbsp;&nbsp;&nbsp;--生成的id<br />
+            <br />
+            应改为:<br />
+            <br />
+            select id from t where name like 'abc%'<br />
+            select id from t where createdate &gt;= '2005-11-30' and createdate &lt; '2005-12-1'<br />
+            <br />
+            10.不要在 where 子句中的“=”左边进行函数、算术运算或其他表达式运算，否则系统将可能无法正确使用索引。<br />
+            <br />
+            11.在使用索引字段作为条件时，如果该索引是复合索引，那么必须使用到该索引中的第一个字段作为条件时才能保证系统使用该索引，否则该索引将不会被使用，并且应尽可能的让字段顺序与索引顺序相一致。<br />
+            <br />
+            12.不要写一些没有意义的查询，如需要生成一个空表结构：<br />
+            <br />
+            select col1,col2 into #t from t where 1=0<br />
+            <br />
+            这类代码不会返回任何结果集，但是会消耗系统资源的，应改成这样：<br />
+            <br />
+            create table #t(…)<br />
+            <br />
+            13.Update 语句，如果只更改1、2个字段，不要Update全部字段，否则频繁调用会引起明显的性能消耗，同时带来大量日志。<br />
+            <br />
+            14.对于多张大数据量（这里几百条就算大了）的表JOIN，要先分页再JOIN，否则逻辑读会很高，性能很差。<br />
+            <br />
+            15.select count(*) from table；这样不带任何条件的count会引起全表扫描，并且没有任何业务意义，是一定要杜绝的。<br />
+            <br />
+            16.索引并不是越多越好，索引固然可以提高相应的 select 的效率，但同时也降低了 insert 及 update 的效率，因为 insert 或 update 时有可能会重建索引，所以怎样建索引需要慎重考虑，视具体情况而定。一个表的索引数最好不要超过6个，若太多则应考虑一些不常使用到的列上建的索引是否有 必要。<br />
+            <br />
+            17.应尽可能的避免更新 clustered 索引数据列，因为 clustered 索引数据列的顺序就是表记录的物理存储顺序，一旦该列值改变将导致整个表记录的顺序的调整，会耗费相当大的资源。若应用系统需要频繁更新 clustered 索引数据列，那么需要考虑是否应将该索引建为 clustered 索引。<br />
+            <br />
+            18.尽量使用数字型字段，若只含数值信息的字段尽量不要设计为字符型，这会降低查询和连接的性能，并会增加存储开销。这是因为引擎在处理查询和连 接时会逐个比较字符串中每一个字符，而对于数字型而言只需要比较一次就够了。<br />
+            <br />
+            19.尽可能的使用 varchar/nvarchar 代替 char/nchar ，因为首先变长字段存储空间小，可以节省存储空间，其次对于查询来说，在一个相对较小的字段内搜索效率显然要高些。<br />
+            <br />
+            20.任何地方都不要使用 select * from t ，用具体的字段列表代替“*”，不要返回用不到的任何字段。<br />
+            <br />
+            21.尽量使用表变量来代替临时表。如果表变量包含大量数据，请注意索引非常有限（只有主键索引）。<br />
+            <br />
+            22.&nbsp;避免频繁创建和删除临时表，以减少系统表资源的消耗。临时表并不是不可使用，适当地使用它们可以使某些例程更有效，例如，当需要重复引用大型表或常用表中的某个数据集时。但是，对于一次性事件， 最好使用导出表。<br />
+            <br />
+            23.在新建临时表时，如果一次性插入数据量很大，那么可以使用 select into 代替 create table，避免造成大量 log ，以提高速度；如果数据量不大，为了缓和系统表的资源，应先create table，然后insert。<br />
+            <br />
+            24.如果使用到了临时表，在存储过程的最后务必将所有的临时表显式删除，先 truncate table ，然后 drop table ，这样可以避免系统表的较长时间锁定。<br />
+            <br />
+            25.尽量避免使用游标，因为游标的效率较差，如果游标操作的数据超过1万行，那么就应该考虑改写。<br />
+            <br />
+            26.使用基于游标的方法或临时表方法之前，应先寻找基于集的解决方案来解决问题，基于集的方法通常更有效。<br />
+            <br />
+            27.与临时表一样，游标并不是不可使用。对小型数据集使用 FAST_FORWARD 游标通常要优于其他逐行处理方法，尤其是在必须引用几个表才能获得所需的数据时。在结果集中包括“合计”的例程通常要比使用游标执行的速度快。如果开发时 间允许，基于游标的方法和基于集的方法都可以尝试一下，看哪一种方法的效果更好。<br />
+            <br />
+            28.在所有的存储过程和触发器的开始处设置 SET NOCOUNT ON ，在结束时设置 SET NOCOUNT OFF 。无需在执行存储过程和触发器的每个语句后向客户端发送 DONE_IN_PROC 消息。<br />
+            <br />
+            29.尽量避免大事务操作，提高系统并发能力。<br />
+            <br />
+            30.尽量避免向客户端返回大数据量，若数据量过大，应该考虑相应需求是否合理。<br />
+            <br />
+            实际案例分析：拆分大的 DELETE 或INSERT 语句，批量提交SQL语句<br />
+            <br />
+            如果你需要在一个在线的网站上去执行一个大的 DELETE 或 INSERT 查询，你需要非常小心，要避免你的操作让你的整个网站停止相应。因为这两个操作是会锁表的，表一锁住了，别的操作都进不来了。<br />
+            <br />
+            Apache 会有很多的子进程或线程。所以，其工作起来相当有效率，而我们的服务器也不希望有太多的子进程，线程和数据库链接，这是极大的占服务器资源的事情，尤其是内存。<br />
+            <br />
+            如果你把你的表锁上一段时间，比如30秒钟，那么对于一个有很高访问量的站点来说，这30秒所积累的访问进程/线程，数据库链接，打开的文件数，可能不仅仅会让你的WEB服务崩溃，还可能会让你的整台服务器马上挂了。<br />
+            <br />
+            所以，如果你有一个大的处理，你一定把其拆分，使用 LIMIT oracle(rownum),sqlserver(top)条件是一个好的方法。下面是一个mysql示例：
+
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="accordion" id="accordion-932367">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-932367" href="#accordion-element-734153">精华文章</a>
+                    </div>
+                    <div id="accordion-element-734153" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            <ul>
+                                <li>
+                                    看了曾经CSDN博客排名第一的大神博客，你是什么想法？ (8133)
+                                </li>
+                                <li>
+                                    Android动态布局，并动态为TextView控件设置drawableLeft、drawableRight
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
