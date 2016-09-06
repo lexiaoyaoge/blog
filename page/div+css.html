@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>邓长生的博客</title>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-combined.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="../js/jquery.1.9.1.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row-fluid" id = "head">
+        <div class="span12" >
+            <br>
+            <h1>
+                &nbsp;&nbsp;just to do
+            </h1>
+            <br>
+            <p>
+                <h2><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lexiaoyaoge</em>&nbsp;<span>只为在装逼的道路上，越走越远！</span></h2>
+            </p>
+            <div id = 'head-label'>
+                <div class="label">福建10大杰出青年</div>
+                <div class="label">装逼青年</div>
+                <div class="label">屌丝当道</div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <div id = "person">个人资料</div>
+            <img  src ="../images/cap.jpg" />
+            <br>
+            <br>
+            <ul class="nav nav-list well">
+                <li class="nav-header">
+                    文章分类
+                </li>
+                <li>
+                    <a href="#"> html+css</a>
+                </li>
+                <li>
+                    <a href="#">git</a>
+                </li>
+                <li>
+                    <a href="#">linux</a>
+                </li>
+                <li>
+                    <a href="#">javascript</a>
+                </li>
+                <li>
+                    <a href="#">jquery</a>
+                </li>
+                <li>
+                    <a href="#">网站优化</a>
+                </li>
+                <li>
+                    <a href="#">微信开放</a>
+                </li>
+                <li>
+                    <a href="#">网站优化</a>
+                </li>
+                <li>
+                    <a href="#">杂谈</a>
+                </li>
+            </ul>
+            <ul class="nav nav-list well">
+                <li class="nav-header" >
+                    月光宝盒
+                </li>
+                <li>
+                    <a href="#">最近一周</a>
+                </li>
+                <li>
+                    <a href="#">最近一月</a>
+                </li>
+                <li>
+                    <a href="#">最近三月</a>
+                </li>
+                <li>
+                    <a href="#">更久</a>
+                </li>
+            </ul>
+        </div>
+        <div class="span10">
+        <center><h3>DIV+CSS布局</h3></center>
+
+        <p>一        DIV+CSS布局优势<br />
+          ① 表现和内容分离<br />
+          ② 代码简洁，提高代码解析速度<br />
+          ③ 易于维护和改版<br />
+          ④ 提高搜索引擎对网页的搜索效率</p>
+        <p>二        布局相关概念<br />
+          1. 盒子模型<br />
+          1.1 定义： 任何一个元素都可以抽象一个盒子模型， 盒子里面可以嵌套盒子<br />
+          (和定义一个盒子,又如何去拜访盒子布局页面,通常我们使用&quot;无意义&quot;<br />
+          的标签&lt;div&gt;定义一个盒子模型,再通过css属性去声明盒子模型的属性.<br />
+          )<br />
+          1.2 组成： 内容   内补白（填充）  边框   外补白（边距）<br />
+          1.3 相关属性：<br />
+          width  height<br />
+          border<br />
+          padding       盒子的边框距离盒子的内容的距离<br />
+          margin       盒子的边框距离上一个盒子或父元素的距离<br />
+          1.4 盒子模型的宽高<br />
+          盒子的宽 = 内容的宽 + 左右内补白+左右边框<br />
+          <br />
+          2.    块级元素和行内元素<br />
+          2.1.  块级元素   块状元素<br />
+          ①总是在新行上开始；<br />
+          ②高度，行高以及外边距和内边距都可控制；<br />
+          ③宽度缺省是它的容器的100%，除非设定一个宽度。<br />
+          ④它可以容纳内联元素和其他块元素<br />
+          2.2.  行内元素    内联元素<br />
+          ① 和其他元素都在一行上<br />
+          ② 宽 高 行高 不可设置， padding可以设置 margin可以甚至左右，不能上下<br />
+          ③ 宽只与内容有关系<br />
+          ④ 只可以容纳文本或其他行内元素<br />
+          2.3 块级和行内的相互转换<br />
+          属性  display<br />
+          值   block   inline inline-block<br />
+          3. 无意义的块级元素div 和 无意义的行内元素span<br />
+          div<br />
+          span<br />
+          4. 盒子区块的浮动<br />
+          浮动的盒子脱离文档流<br />
+          设置元素的css float属性<br />
+          clear属性可以清除浮动 <br />
+          5.盒子区块的定位<br />
+          定位的元素脱离文档流<br />
+          属性  position <br />
+          相对定位： 相对于自己原先的位置定位， 配合left  top   right  bottom<br />
+          不影响其他元素的布局<br />
+          绝对定位： 相对于定位的父元素,如果父元素没定位，向上找,直到找到定位的父元素，如果没有定位的父元素，相对于body<br />
+          影响其他元素的布局</p>
+        <p> z-index属性： z-index用于定位的元素 设置元素显示优先级， 默认0  越大优先级越高  可以有负值<br />
+          三     布局相关的属性<br />
+          1.    尺寸<br />
+          width         设置内容的宽<br />
+          height            设置内容的高 <br />
+          2.    外补白<br />
+          margin                            简写 同padding <br />
+          margin-top                        距离上边的边距<br />
+          margin-right                  右边<br />
+          margin-bottom                 下边<br />
+          margin-left                       左边<br />
+          3. 内补白 <br />
+          padding <br />
+          padding: 四边<br />
+          padding: 上下  左右<br />
+          padding: 上 左 右 下<br />
+          padding: 上 右 下 左<br />
+          padding-top                               上边内补白<br />
+          padding-right                             右边<br />
+          padding-bottom                        下边<br />
+          padding-left                              左边<br />
+          4.    布局<br />
+          display       设置元素的显示方式     值 block以块级元素显示    inline以行内元素显示    none：不显示    inline-block:(IE6、7不支持， 介于inline和block之间的状态)<br />
+          visibility<br />
+          overflow<br />
+          overflow-x<br />
+          overflow-y<br />
+          float         设置浮动方式      值 left    right       none<br />
+          clear         清除浮动                值  left   right      both(重用)<br />
+          5. 定位<br />
+          position<br />
+          left<br />
+          right<br />
+          top<br />
+          bottom<br />
+          z-index<br />
+          float<br />
+          四     布局设计<br />
+          1.    居中<br />
+          2.    浮动布局<br />
+          2.1   两列浮动<br />
+          2.2   三列浮动</p>
+        </div>
+
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="accordion" id="accordion-932367">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-932367" href="#accordion-element-734153">精华文章</a>
+                    </div>
+                    <div id="accordion-element-734153" class="accordion-body collapse in">
+                        <div class="accordion-inner">
+                            <ul>
+                                <li>
+                                    看了曾经CSDN博客排名第一的大神博客，你是什么想法？ (8133)
+                                </li>
+                                <li>
+                                    Android动态布局，并动态为TextView控件设置drawableLeft、drawableRight
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+

@@ -1,16 +1,22 @@
 body{
-    background-color: rgb(240,250,252);
+
 }
 #head{
     background-image:url(../images/bg-title-blue.png);
     background-repeat: repeat;
     height: 220px;
-    color: rgb(255,255,255);
+    background-color: rgb(240,250,252);
+    color: rgb(63,63,63);
+    margin:0 0 20px  0 ;
 }
 #head-label{
-    margin:60px 10px 0;
+    margin:40px 10px 0;
     float: right;
 }
 #head-label div{
     margin: 0 5px;
+}
+#person{
+    background-color: rgb(245,245,245);
+    font-size: 12px;
 }
